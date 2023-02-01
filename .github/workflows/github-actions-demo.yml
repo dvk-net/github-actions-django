@@ -22,4 +22,5 @@ jobs:
       - name: Run Tests
         run: |
           cd ./src
+          echo "SECRET_KEY = 'django-insecure-dummy-secret'" > ./proj/secrets.py
           python3 manage.py test
