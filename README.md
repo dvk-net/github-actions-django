@@ -1,6 +1,7 @@
 # TO DO
 
 ![action status](https://github.com/dvk-net/github-actions-django/actions/workflows/github-actions-demo.yml/badge.svg)
+![diagram](github_actions.svg)
 
 1. Create simple Django Project
 1. Add secrets.py to .gitignore
@@ -14,4 +15,5 @@
 1. Add sample data to it
 1. Add path
 1. Add actions
+1. Protect master
 1. Add badge
