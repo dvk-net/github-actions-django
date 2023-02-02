@@ -14,4 +14,4 @@
 1. Add sample data to it
 1. Add path
 1. Add actions
-1. Add badge 
+1. Add badge
