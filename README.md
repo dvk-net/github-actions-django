@@ -1,6 +1,9 @@
 # TO DO
 
 ![action status](https://github.com/dvk-net/github-actions-django/actions/workflows/github-actions-demo.yml/badge.svg)
+
+[Video Demo [RU]](https://youtu.be/0vYJbLEa_fs)
+
 ![diagram](github_actions.svg)
 
 1. Create simple Django Project
