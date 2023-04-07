@@ -36,4 +36,4 @@ jobs:
         run: |
           python3 coverage_cicd.py
         env:
-          COVERAGE_THRESHOLD: $COVERAGE_THRESHOLD
+          COVERAGE_THRESHOLD: ${{vars.COVERAGE_THRESHOLD}}
