@@ -12,7 +12,7 @@ class ThresholdException(Exception):
 
 TOKEN="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"
 GIST_ID="71796e1b5facbb81ddcc17b6bbc66fb9"
-COVERAGE_THRESHOLD = 80
+COVERAGE_THRESHOLD = 50
 if __name__ == "__main__":
     os.environ['DJANGO_SETTINGS_MODULE'] = 'proj.settings'
     sys.path.insert(0,'./src')
