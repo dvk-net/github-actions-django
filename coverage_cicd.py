@@ -7,8 +7,12 @@ import requests
 from django.conf import settings
 from django.test.utils import get_runner
 
+class ThresholdException(Exception):
+    pass
+
 TOKEN="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"
 GIST_ID="71796e1b5facbb81ddcc17b6bbc66fb9"
+COVERAGE_THRESHOLD = float(os.environ.get("COVERAGE_THRESHOLD", 80))
 if __name__ == "__main__":
     os.environ['DJANGO_SETTINGS_MODULE'] = 'proj.settings'
     sys.path.insert(0,'./src')
@@ -66,5 +70,7 @@ if __name__ == "__main__":
         "X-GitHub-Api-Version": "2022-11-28"
         }
     URL = f"https://api.github.com/gists/{ GIST_ID }"
-    r = requests.patch(URL, headers=headers, data=json.dumps(payload))
-    print("GIST", r.text)
+    if result >= COVERAGE_THRESHOLD:
+        r = requests.patch(URL, headers=headers, data=json.dumps(payload))
+    else:
+        raise ThresholdException(f"Coverage is below the ({COVERAGE_THRESHOLD}) threshold")
